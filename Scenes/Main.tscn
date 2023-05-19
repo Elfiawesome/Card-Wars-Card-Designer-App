@@ -1,0 +1,46 @@
+[gd_scene load_steps=2 format=3 uid="uid://6nsdhu4iitw8"]
+
+[ext_resource type="Script" path="res://Scenes/Main.gd" id="1_pu3ps"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pu3ps")
+
+[node name="DebugLabel" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 2
+
+[node name="Table" type="Panel" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TableScrollBar" type="VScrollBar" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(30, 0)
+layout_mode = 2

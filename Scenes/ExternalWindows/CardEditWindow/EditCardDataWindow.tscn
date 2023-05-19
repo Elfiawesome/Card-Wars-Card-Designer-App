@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://dfsraaugpnif0"]
+
+[ext_resource type="Script" path="res://Scenes/ExternalWindows/CardEditWindow/EditCardDataWindow.gd" id="1_4q3pl"]
+[ext_resource type="Texture2D" uid="uid://b3evyvuly064h" path="res://icon.svg" id="2_1vweb"]
+
+[node name="EditCardDataWindow" type="Window"]
+initial_position = 1
+title = "Edit Card Data"
+size = Vector2i(600, 600)
+script = ExtResource("1_4q3pl")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Bg" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.203922, 0.278431, 0.352941, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/Bg"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Bg/MarginContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="Control/Bg/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.6
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/Bg/MarginContainer/VBoxContainer/Panel"]
+texture = ExtResource("2_1vweb")
+centered = false
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Bg/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.4
